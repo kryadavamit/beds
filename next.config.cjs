@@ -1,6 +1,5 @@
-
 // const module = require('module');
-module.exports ={
+module.exports = {
   images: {
     domains: [
       "ecrm.tripazzo.in",
@@ -17,6 +16,4 @@ module.exports ={
     ignoreDuringBuilds: true,
   },
   // extends: [require.resolve('.'), 'plugin:@next/next/core-web-vitals'],
-
 };
-
