@@ -14,23 +14,24 @@ import { useRouter } from "next/router";
 
 
 
-
 const options = [
   { value: 'one', label: 'One' },
   { value: 'two', label: 'Two', className: 'myOptionClassName' }, 
 ];
 
 
-function Linenfabric({response}){
+function LinenDivanBeds({response}){
+  console.log(response)
+  console.log(response[0].images[0].color1.base_url)
   const router = useRouter();
-  const [size, setSize] = useState("");
-  const [color, setcolor] = useState('')
+  
+  const [size, setSize] = useState("5FT");
   const [maxPrice, setMaxPrice] = useState();
-  const [images, setimages] = useState("");
   const [minPrice, setMinPrice] = useState();
+
+  const [images, setimages] = useState("");
+  const [image1, setimage1] = useState("");
   const [imageUrl, setImageUrl] = useState("color1");
-  
-  
  
  
 
@@ -45,9 +46,9 @@ function Linenfabric({response}){
     useEffect(() => {
 
 
-      router.push(`/divanbed/linen-Fabric-Divan-Beds?${size ? "size=" + size : ""}${maxPrice ? size ? "&maxPrice=" + maxPrice : "maxPrice=" + maxPrice : ""}${minPrice ? "&minPrice=" + minPrice : ""}${images ? "&color=" + images : ""}`)
+      router.push(`/divanbed/low-Divan-Beds?${size ? "size=" + size : ""}${maxPrice ? size ? "&maxPrice=" + maxPrice : "maxPrice=" + maxPrice : ""}${minPrice ? "&minPrice=" + minPrice : ""}${images ? "&color=" + images : ""}`)
   
-    }, [size, maxPrice, minPrice, images, color])
+    }, [size, maxPrice, minPrice, images])
 
   }
 
@@ -73,12 +74,13 @@ function Linenfabric({response}){
         
           <div className="container">
               <div className="row text-center ">
-                  <h1 className="font-weight-bold mt-6" style={{color:"#0e3f70"}}>House Linen fabric divan beds</h1>
+                  <h1 className="font-weight-bold mt-6" style={{color:"#0e3f70"}}>Low divan beds</h1>
                   <p className="mt-4" style={{fontSize:"17px",fontWeight:"300",color:"#3a356d",fontStyle:"normal"}}>A great night’s sleep starts with the perfect bed, and we can help with that! Not only are our house fabric divan beds ridiculously comfortable, but they’re super stylish too. Available in a variety of fabrics and colours, our range of divan beds will complement any home decor perfectly. We have something to suit everyone.</p>
 
               </div>
 
           </div>
+
           <div className="section mt-4 mb-4">
         <div className="container-fluid">
           
@@ -163,8 +165,9 @@ function Linenfabric({response}){
         </div>
       </div>
 
-           {/* Filter Tag Start */}
-           <div
+          
+               {/* Filter Tag Start */}
+               <div
               className="container mt-4 mb-4 rounded"
               style={{ backgroundColor: "#f2f2f2" }}
             >
@@ -213,8 +216,8 @@ function Linenfabric({response}){
                       <option label="Color" />
                       <option value={"color1"} label="Grey Linen" />
                       <option value="color2" label="Black Cotton" />
-                      <option value="color3" label="Chenille" />
-                      <option value="color4" label="Black Crushed" />
+                      {/* <option value="color3" label="Chenille" />
+                      <option value="color4" label="Black Crushed" /> */}
 
                     </select>
 
@@ -235,7 +238,7 @@ function Linenfabric({response}){
                         const value = JSON.parse(e.target.value)
                         setMaxPrice(value.maxPrice);
                         setMinPrice(value.minPrice);
-                        router.push(`/divanbed/linen-Fabric-Divan-Beds?maxPrice=${value.maxPrice}&minPrice=${value.minPrice}${router?.query?.size ? "&size=" + router.query.size : ""}&color=${value.images}`)
+                        router.push(`/divanbed/low-Divan-Beds?maxPrice=${value.maxPrice}&minPrice=${value.minPrice}${router?.query?.size ? "&size=" + router.query.size : ""}&color=${value.images}`)
 
 
                       }}>
@@ -253,6 +256,7 @@ function Linenfabric({response}){
 
           
 
+
           
     
           
@@ -266,24 +270,27 @@ function Linenfabric({response}){
                 {response.map((item) => {
                   
                   var colorName;
-                switch(imageUrl){
-                  case "color1": colorName="Grey Linen";
-                  break;
-                  case "color2": colorName="Black Cotton";
-                  break;
-                  case "color3": colorName="Chenille";
-                  break;
-                  case "color4": colorName="Black Crushed";
-                  break;
-                }
+                  switch(imageUrl){
+                    case "color1": colorName="Grey Linen";
+                    break;
+                    case "color2": colorName="Black Cotton";
+                    break;
+                    // case "color3": colorName="Charcoal Chenille";
+                    // break;
+                    // case "color4": colorName="Black Crushed";
+                    // break;
+                  }
+                   
+  
+  
                   return (
                     <ProductBox
+                      category={item.category}
                       src={item.images[0][imageUrl].base_url}
                       title={item.product_name}
                       price={item.price}
-                      category={item.category}
                       size={item.size}
-                      color={colorName}
+                      color={[colorName]}
                     />
                   );
                 })}
@@ -350,28 +357,21 @@ Another advantage to divans is that they don’t take up too much space as the b
         </div>
     )
 }
-export default Linenfabric;
+export default LinenDivanBeds;
 export async function getServerSideProps(context) {
-  const { query } = context;
- // const size = query?.__NEXT_INIT_QUERY?.size;
+  const { req } = context;
+  const size = req?.__NEXT_INIT_QUERY?.size;
   let sizes = "";
 
-  //const category = query?.__NEXT_INIT_QUERY?.category;
-  const category = "Linen Fabric DivanBeds";
-  const size=query?.size;
+  const category = req?.__NEXT_INIT_QUERY?.category;
 
-
-  // size ? (sizes = size) : (sizes = "2FT 6");
-  const minPrice = query?.minPrice ? query.minPrice : "";
-  const maxPrice = query?.maxPrice ? query.maxPrice : "";
-  const images = query?.images ? query.images : "";
-
-  const data = await axios.get(
-    `${process.env.BASE_URL}/api/products/bestproducts?size=${size}&category=${category}&minPrice=${minPrice}&maxPrice=${maxPrice}&color=${images}`,
-    // {
-    //   method: "category",
-    //   value: "Linen Fabric DivanBeds",
-    // }
+  size ? (sizes = size) : (sizes = "2FT 6");
+  const data = await axios.post(
+    `${process.env.BASE_URL}/api/products/getbeds`,
+    {
+      method: "category",
+      value: "Linen Fabric DivanBeds",
+    }
   );
   const response = data.data.data;
   return {

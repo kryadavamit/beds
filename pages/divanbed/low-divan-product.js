@@ -104,6 +104,7 @@ let titlebottomline = {
 };
 
 function NewProduct({ response, response1, response2 }) {
+  console.log(response)
   
   //ADD TO CART REDUX
   const dispatch = useDispatch();
@@ -2079,13 +2080,18 @@ export default NewProduct;
 export async function getServerSideProps(context) {
   const { req, query } = context;
   const title = query?.title;
+  const category=query?.category;
   
   const size = query?.size;
 
-  const data = await axios.post(`${process.env.BASE_URL}/api/products/getbeds`, {
-    method: "product_name",
-    value: decodeURI(title),
-  });
+  const data = await axios.post(
+    `${process.env.BASE_URL}/api/products/getbeds`,
+    {
+      method: "product_name",
+      value: decodeURI(title),
+    }
+  );
+  console.log(data)
   
 
   const data1 = await axios.post(`${process.env.BASE_URL}/api/products/getbeds`, {
