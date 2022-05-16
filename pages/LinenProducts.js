@@ -444,12 +444,19 @@ console.log(divanBedsColorName[0].images[0].color1)
                                             return beds.size === "2FT 6";
                                           }
                                         );
-                                        setImage(
-                                          (size==="2FT 6")?newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png"
-                                        );
+                                        // setImage(
+                                        //   // (size==="2FT 6")?newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png"
+                                        //   function(size){
+                                        //     return size==="2FT 6"?newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png"
+                                        //   }
+                                        // );
+                                        setImage(newarray[0].images[0].color1.base_url?newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png")
+                                        
+
                                         setSize("2FT 6");
                                         setBed(newarray[0]);
-                                        setColor(size==="2FT 6" ? newarray[0].images[0].color1:"/assets/images/image/no-image-found.png");
+                                        // setColor(size==="2FT 6" ? newarray[0].images[0].color1:"/assets/images/image/no-image-found.png");
+                                        setColor( newarray[0].images[0].color1);
                                       }}
                                     >
                                       <Image
@@ -479,9 +486,14 @@ console.log(divanBedsColorName[0].images[0].color1)
                                             return beds.size === "3FT";
                                           }
                                         );
-                                        setImage(
-                                         size==='3FT'? newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png"
-                                        );
+                                        // setImage(
+                                        // //  size==='3FT'? newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png"
+                                        // function(size){
+                                        //   return size==='3FT'? newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png"
+                                        // }
+                                        // );
+                                         setImage(newarray[0].images[0].color1.base_url?newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png")
+
                                         setBed(newarray[0]);
                                         setColor(newarray[0].images[0].color1);
                                         setSize("3FT");
@@ -515,7 +527,7 @@ console.log(divanBedsColorName[0].images[0].color1)
                                           }
                                         );
                                         setImage(
-                                           size==="4FT"?newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png"
+                                           newarray[0].images[0].color1.base_url?newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png"
                                         );
                                         setBed(newarray[0]);
                                         setColor(size==="4FT"?newarray[0].images[0].color1:"");
@@ -550,7 +562,7 @@ console.log(divanBedsColorName[0].images[0].color1)
                                           }
                                         );
                                         setImage(
-                                         size==="4FT 6"? newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png"
+                                          newarray[0].images[0].color1.base_url?newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png"
                                         );
                                         setColor( size==="4FT 6"? newarray[0].images[0].color1:"");
                                         setSize("4FT 6");
@@ -588,7 +600,7 @@ console.log(divanBedsColorName[0].images[0].color1)
                                           }
                                         );
                                         setImage(
-                                          size==="5FT"? newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png"
+                                          newarray[0].images[0].color1.base_url?newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png"
                                         );
                                         setColor(size==="5FT"? newarray[0].images[0].color1:"");
                                         setSize("5FT");
@@ -625,7 +637,7 @@ console.log(divanBedsColorName[0].images[0].color1)
                                         setColor(size==="6FT"? newarray[0].images[0].color1:"");
                                         setSize("6FT");
                                         setImage(
-                                          size==="6FT"? newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png"
+                                           newarray[0].images[0].color1.base_url?newarray[0].images[0].color1.base_url:"/assets/images/image/no-image-found.png"
                                         );
                                         setBed(newarray[0]);
                                         
@@ -2045,8 +2057,8 @@ export async function getServerSideProps(context) {
   const data = await axios.post(
     `${process.env.BASE_URL}/api/products/getbeds`,
     {
-      method: "category",
-      value: "Linen Fabric DivanBeds",
+      method: "product_name",
+      value: decodeURI(title),
     }
   );
 

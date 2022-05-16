@@ -46,7 +46,7 @@ function LinenDivanBeds({response}){
     useEffect(() => {
 
 
-      router.push(`/divanbed/low-Divan-Beds?${size ? "size=" + size : ""}${maxPrice ? size ? "&maxPrice=" + maxPrice : "maxPrice=" + maxPrice : ""}${minPrice ? "&minPrice=" + minPrice : ""}${images ? "&color=" + images : ""}`)
+      router.push(`/divanbed/linen-Fabric-Divan-Beds?${size ? "size=" + size : ""}${maxPrice ? size ? "&maxPrice=" + maxPrice : "maxPrice=" + maxPrice : ""}${minPrice ? "&minPrice=" + minPrice : ""}${images ? "&color=" + images : ""}`)
   
     }, [size, maxPrice, minPrice, images])
 
@@ -238,7 +238,7 @@ function LinenDivanBeds({response}){
                         const value = JSON.parse(e.target.value)
                         setMaxPrice(value.maxPrice);
                         setMinPrice(value.minPrice);
-                        router.push(`/divanbed/low-Divan-Beds?maxPrice=${value.maxPrice}&minPrice=${value.minPrice}${router?.query?.size ? "&size=" + router.query.size : ""}&color=${value.images}`)
+                        router.push(`/divanbed/linen-Fabric-Divan-Beds?maxPrice=${value.maxPrice}&minPrice=${value.minPrice}${router?.query?.size ? "&size=" + router.query.size : ""}&color=${value.images}`)
 
 
                       }}>
@@ -358,20 +358,51 @@ Another advantage to divans is that they don’t take up too much space as the b
     )
 }
 export default LinenDivanBeds;
+// export async function getServerSideProps(context) {
+//   const { req } = context;
+//   const title=req.__NEXT_INIT_QUERY?.product_name;
+//   title?title:""
+//   const size = req?.__NEXT_INIT_QUERY?.size;
+//   let sizes=""
+//   const maxPrice= req?.__NEXT_INIT_QUERY?.maxPrice;
+//   const minPrice = req?.__NEXT_INIT_QUERY?.minPrice;
+//   // const category = req?.__NEXT_INIT_QUERY?.category;
+
+//   size ? (sizes = size) : (sizes = "5FT");
+//   const data = await axios.post(
+//     `${process.env.BASE_URL}/api/products/getbeds?size=${size}&minPrice=${minPrice}&maxPrice=${maxPrice}`,
+//     {
+//       method: "category",
+//       value: "Linen Fabric DivanBeds",
+//     }
+//   );
+//   const response = data.data.data;
+//   return {
+//     props: { response }, // will be passed to the page component as props
+//   };
+// }
+
 export async function getServerSideProps(context) {
-  const { req } = context;
-  const size = req?.__NEXT_INIT_QUERY?.size;
+  const { query } = context;
+ // const size = query?.__NEXT_INIT_QUERY?.size;
   let sizes = "";
 
-  const category = req?.__NEXT_INIT_QUERY?.category;
+  //const category = query?.__NEXT_INIT_QUERY?.category;
+  const category = "Linen Fabric DivanBeds";
+  const size=query?.size;
 
-  size ? (sizes = size) : (sizes = "2FT 6");
-  const data = await axios.post(
-    `${process.env.BASE_URL}/api/products/getbeds`,
-    {
-      method: "category",
-      value: "Linen Fabric DivanBeds",
-    }
+
+  // size ? (sizes = size) : (sizes = "2FT 6");
+  const minPrice = query?.minPrice ? query.minPrice : "";
+  const maxPrice = query?.maxPrice ? query.maxPrice : "";
+  const images = query?.images ? query.images : "";
+
+  const data = await axios.get(
+    `${process.env.BASE_URL}/api/products/bestproducts?size=${size}&category=${category}&minPrice=${minPrice}&maxPrice=${maxPrice}&color=${images}`,
+    // {
+    //   method: "category",
+    //   value: "Linen Fabric DivanBeds",
+    // }
   );
   const response = data.data.data;
   return {
