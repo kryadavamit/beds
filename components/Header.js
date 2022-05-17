@@ -179,9 +179,9 @@ export default function Header() {
                     </div>
 
                     <div className="header-top-content">
-                      <a href="/about">
+                      <Link href="/about">
                         <button>About us</button>
-                      </a>
+                      </Link>
                     </div>
                     <div className="header-top-content">
                       <button>01902405535</button>
@@ -197,12 +197,14 @@ export default function Header() {
             <div className="row  ">
               <div className="col-md-2 align-self-center">
                 <div className="header-logo">
-                  <Link href="/home">
+                  <Link href="/">
                     <Image
+                    className="header-logo"
                       alt="BedsDivan"
                       src="/assets/images/logo/logo.png"
-                      width={100}
-                      height={100}
+                      width={1000}
+                      height={1000}
+                      priority
                     />
                   </Link>
                 </div>

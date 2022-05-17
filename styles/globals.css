@@ -13118,17 +13118,19 @@ input {
 }
 
 .header-logo Image {
-  width: 100px;
-  height: 111px;
+  width: auto;
+  height: 100px;
   margin-top: -41px;
-
   position: relative;
+  left: 0;
 }
 .header-logo {
-  left: -32px;
+  left: -62px;
   margin-top: -22px;
   margin-bottom: 3px;
   cursor: pointer;
+  position: relative;
+  top: 11px;
 }
 .form-control {
   letter-spacing: 0.5px !important;
@@ -13195,12 +13197,11 @@ input {
     margin-top: 37px !important;
   }
   .header-logo img {
-    width: 83px;
-    height: 87px;
-    margin-top: -68px;
+    width: 250px;
+    height: 100px;
+    margin-top: -41px;
     position: relative;
-    left: -17px;
-    top: 24px;
+    left: -29px;
   }
   .mobile-menu img {
     width: 32px !important;

@@ -34,8 +34,9 @@ export default function Footer() {
                 >
                   <div className="single-wedge ">
                     <Image
-                      width={128}
-                      height={128}
+                      width={250}
+                      height={100}
+                      priority
                       className=""
                       src="/assets/images/logo/logo.png"
                       alt=""
