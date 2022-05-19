@@ -13131,6 +13131,8 @@ input {
   cursor: pointer;
   position: relative;
   top: 11px;
+  width: 100px;
+  height: 92px;
 }
 .form-control {
   letter-spacing: 0.5px !important;
@@ -14642,7 +14644,7 @@ ul.li-text2 {
 }
 
 .slider-height {
-  height: 496px !important    ;
+  height: 60vh !important    ;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
@@ -22467,7 +22469,7 @@ a.image.imagefor img {
 }
 .fluid-color {
   background-size: cover !important;
-  height: 700px !important;
+  height: 90vh !important;
   background-image: url("/assets/images/dbz bg.jpg");
 }
 .inputfield {
@@ -23161,7 +23163,7 @@ a.image.imagefor img {
   .timercont + div {position: static !important;}
   .timercont + div>div {position: static !important;}
   .timercont + div>div img {width: 100% !important;min-width: 500px;max-width: 500px;width: 790px !important;}
-  .timercont + div>div + img#shwimg_1 {object-fit: none;left: 0 !important;right: auto !important;transform: scale(1.3);left: 60px !important;}
+  /* .timercont + div>div + img#shwimg_1 {object-fit: none;left: 0 !important;right: auto !important;transform: scale(1.3);left: 60px !important;} */
   .container-fluid.Complete-your-Bedroom {
     margin-top: 597px;
   }
@@ -24159,5 +24161,8 @@ nav.newTab.nav.nav-tabs a.active {
 .outer-tab-section {position: relative;left: 235px;}
 .timercont + div {position: static !important;}
 .timercont + div>div {position: static !important;}
-.timercont + div>div img {width: 100% !important;min-width: 500px;max-width: 500px;width: 790px !important;}
-.timercont + div>div + img#shwimg_1 {object-fit: none;left: 0 !important;right: auto !important;transform: scale(1.3);left: 60px !important; margin-top: -67px !important;}
+.timercont + div>div img{ width: 100%; height: 62vh;
+}
+/* .timercont + div>div img {width: 100% !important;min-width: 500px;max-width: 500px;width: 790px !important;}
+
+.timercont + div>div + img#shwimg_1 {object-fit: none;left: 0 !important;right: auto !important;transform: scale(1.3);left: 60px !important; margin-top: -67px !important;} */

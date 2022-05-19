@@ -1160,6 +1160,8 @@ console.log(divanBedsColorName[0].images[0].color1)
               </div>
             </div>
           </div>
+
+           
           <div
             className="container-fluid  Complete-your-Bedroom"
             style={{ backgroundColor: "#F5F5F5" }}

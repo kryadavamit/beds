@@ -134,8 +134,8 @@ export default function Header() {
                     <Image
                       alt="BedsDivan"
                       src="/assets/images/logo/logo.png"
-                      width={100}
-                      height={100}
+                      width={400}
+                      height={500}
                     />
                   </Link>
                 </div>

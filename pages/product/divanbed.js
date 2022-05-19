@@ -1,7 +1,6 @@
 import Image from "next/image/";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import Head from "next/head";
 import Header from "../../components/Header";
 import Review from "../../components/Review";
@@ -12,8 +11,6 @@ import { useEffect } from "react";
 import { useState } from "react";
 import ProductBox from "../../components/comps/ProductBox";
 import { useRouter } from "next/router";
-import image from "next/image";
-import { json } from "body-parser";
 // import Mobilemenu from "../../components/comps/Mobilemenu";
 
 function Divanbed({ response }) {
