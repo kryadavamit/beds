@@ -21,6 +21,7 @@ import Headboardtab from "../components/homefeaturetab/Headboardtab";
 import Homemenunew from "../components/comps/Homemenunew";
 import Award from "../components/award";
 import Gardenfurnituretab from "../components/homefeaturetab/Gardenfurnituretab";
+import Styles from "../styles/Home.module.css"
 // import SliderBox from "../components/comps/SliderBox";
 
 export default function Home({ response, response1, response2, response3 }) {
@@ -64,7 +65,8 @@ export default function Home({ response, response1, response2, response3 }) {
         <div className="hero-slider swiper-container slider-nav-style-1 slider-dot-style-1">
           <div className="swiper-wrapper">
             <div className="hero-slide-item slider-height swiper-slide d-flex">
-              <div className="container mt-10 text-center">
+              <div className="container  text-center">
+                <div className={Styles.bannerheadingmiddle}>
                 <h1
                   className="HeadingForM"
                   style={{
@@ -107,14 +109,16 @@ export default function Home({ response, response1, response2, response3 }) {
                     <b>SHOP NOW</b>
                   </button>
                 </div>
+                </div>
+
               </div>
             </div>
           </div>
           <div className="swiper-pagination swiper-pagination-white"></div>
-          <div className="swiper-buttons">
+          {/* <div className="swiper-buttons">
             <div className="swiper-button-next"></div>
             <div className="swiper-button-prev"></div>
-          </div>
+          </div> */}
         </div>
       </div>
       {/* desktopview start */}

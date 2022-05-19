@@ -199,7 +199,7 @@ export default function Header() {
                 <div className="header-logo">
                   <Link href="/">
                     <Image
-                    className="header-logo"
+                    className=""
                       alt="BedsDivan"
                       src="/assets/images/logo/logo.png"
                       width={1000}
@@ -379,194 +379,7 @@ export default function Header() {
 
               </div>
 
-              {/* <div className="col-md-4 align-self-center">
-<input
-                        className="form-control"
-                        placeholder="Search"
-                        type="text"
-                        onChange={(e) => setQuery(e.target.value)}
-                      /> 
-                      <ul
-                      className="search_suggestions"
-                      style={{ display: query ? "block" : "none" }}
-                    >
-                      {autocomplete.length ? (
-                        autocomplete.map((suggestion) => (
-                          <li
-                            key={suggestion._id}
-                            onClick={() =>
-                              handleRoute(
-                                suggestion.type,
-                                suggestion.product_name
-                              )
-                            }
-                          >
-                            {suggestion.product_name}
-                            <span>in {suggestion.type}</span>
-                          </li>
-                        ))
-                      ) : (
-                        <p style={{ textAlign: "center" }}>
-                          Oops, No Result Found
-                        </p>
-                      )}
-                      <li
-                        style={{
-                          textAlign: "center",
-                          color: "grey",
-                          padding: 5,
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          fontSize: 12,
-                        }}
-                        onClick={() =>
-                          handleRoute(
-                            suggestion.category,
-                            suggestion.product_name
-                          )
-                        }
-                      >
-                        view all results{" "}
-                      </li>
-                    </ul>
-  
-  </div> */}
-              {/* <div className="col-1 align-self-center">
-  <Box sx={{ minWidth: 120 }}>
-      <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Age</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={category}
-          label="Category"
-          onChange={handleChange}
-        >
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-      </FormControl>
-    </Box>
-    
-    </div> */}
-              {/* <div className="col-1 align-self-center">
-    <button
-                        className="submit"
-                        type="submit"
-                        onClick={handleSearch}
-                      >
-                        <img
-                          src="/assets/images/image/Icon material-search.png"
-                          style={{ height: "22px", opacity: "0.9" }}
-                          alt="bedsdivans"
-                        />
-                      </button>
-    </div> */}
-
-              {/* <Box >
-      <FormControl >
-        <InputLabel id="demo-simple-select-label">Age</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={age}
-          label="Age"
-          onChange={handleChange}
-        >
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
-        </Select>
-      </FormControl>
-    </Box> */}
-
-              {/* <div className="col-md-6 align-self-center">
-                <div className="header-actions search-section">
-                  <div className="header_search-form">
-                    <form className="action-form" action="#">
-                      <input
-                        className="form-control"
-                        placeholder="Search"
-                        type="text"
-                        onChange={(e) => setQuery(e.target.value)}
-                      /> */}
-              {/* <Box >
-                      <FormControl >
-                        <InputLabel id="demo-simple-select-label">Age</InputLabel>
-                        <Select
-                          labelId="demo-simple-select-label"
-                          id="demo-simple-select"
-                          value={age}
-                          label="Age"
-                          onChange={handleChange}
-                        >
-                          <MenuItem value={10}>Ten</MenuItem>
-                          <MenuItem value={20}>Twenty</MenuItem>
-                          <MenuItem value={30}>Thirty</MenuItem>
-                        </Select>
-                      </FormControl>
-                    </Box> */}
-              {/* <button
-                        className="submit"
-                        type="submit"
-                        onClick={handleSearch}
-                      >
-                        <img
-                          src="/assets/images/image/Icon material-search.png"
-                          style={{ height: "22px", opacity: "0.9" }}
-                          alt="bedsdivans"
-                        />
-                      </button>
-                    </form>
-                    <ul
-                      className="search_suggestions"
-                      style={{ display: query ? "block" : "none" }}
-                    >
-                      {autocomplete.length ? (
-                        autocomplete.map((suggestion) => (
-                          <li
-                            key={suggestion._id}
-                            onClick={() =>
-                              handleRoute(
-                                suggestion.type,
-                                suggestion.product_name
-                              )
-                            }
-                          >
-                            {suggestion.product_name}
-                            <span>in {suggestion.type}</span>
-                          </li>
-                        ))
-                      ) : (
-                        <p style={{ textAlign: "center" }}>
-                          Oops, No Result Found
-                        </p>
-                      )}
-                      <li
-                        style={{
-                          textAlign: "center",
-                          color: "grey",
-                          padding: 5,
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          fontSize: 12,
-                        }}
-                        onClick={() =>
-                          handleRoute(
-                            suggestion.category,
-                            suggestion.product_name
-                          )
-                        }
-                      >
-                        view all results{" "}
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div> */}
+        
               <div className="col-md-2 align-self-center">
                 <div className="cartfordesktop">
                   <div className="header-actions">
@@ -1184,12 +997,11 @@ export default function Header() {
                       </ul>
                     </li>
 
-                    <li className="dropdown position-static">
+                    {/* <li className="dropdown position-static">
                       <Link className="ForBold" href="/product/sofa">
                         Sofa
                       </Link>
-                      {/* <i
-                                            className="ion-ios-arrow-down"></i> */}
+                     
                       <ul className="mega-menu d-block">
                         <li className="d-flex">
                           <ul className="d-block">
@@ -1306,7 +1118,7 @@ export default function Header() {
                           </ul>
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
                     <li className="dropdown position-static">
                       <Link href="/product/gardenfurniture">
                         Garden Furniture
@@ -1382,23 +1194,13 @@ export default function Header() {
                       </ul>
                     </li>
 
-                    {/* <li className="dropdown "><a href="#"> <b> Garden Furniture </b></a>
-                                    <ul className="sub-menu">
-                                        <li className="dropdown position-static"><a href="blog-grid-left-sidebar.html">Garden Sofa Sets
-                                             </a> 
-                                        </li>
-                                        <li className="dropdown position-static"><a href="blog-list-left-sidebar.html">Garden Dining Sets
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li> */}
+                
 
-                    <li className="dropdown position-static">
+                    {/* <li className="dropdown position-static">
                       <Link href="/product/livingroom">
                         Living Room Furniture
                       </Link>
-                      {/* <i
-                                            className="ion-ios-arrow-down"></i> */}
+                     
                       <ul className="mega-menu d-block">
                         <li className="d-flex">
                           <ul className="d-block">
@@ -1497,12 +1299,11 @@ export default function Header() {
                           </ul>
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
 
-                    <li className="dropdown position-static">
+                    {/* <li className="dropdown position-static">
                       <Link href="/product/diningset"> Dining Set </Link>
-                      {/* <i
-                                            className="ion-ios-arrow-down"></i> */}
+                       
                       <ul className="mega-menu d-block">
                         <li className="d-flex">
                           <ul className="d-block">
@@ -1582,7 +1383,7 @@ export default function Header() {
                           </ul>
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
                     <li>
                       <a href="contact.html" style={{ color: "red" }}>
                         <b>Sale</b>

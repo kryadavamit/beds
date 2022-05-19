@@ -13080,12 +13080,11 @@ color: #262884;
 }
 
 .header-logo img {
-    width: 113px;
-    height: 111px;
-    margin-top: -41px;
-     
+    width: 100px;
+    height: 92px;
+    margin-top: 0;
     position: relative;
-    left: -29px;
+  
 }
 .login-button{
     border: 2px solid #262884;
