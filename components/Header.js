@@ -761,11 +761,7 @@ export default function Header() {
                                 Linen Fabric Divan Beds
                               </Link>
                             </li>
-                            <li>
-                              <Link href="/product/myShop">
-                                MyShop
-                              </Link>
-                            </li>
+                            
                             <li>
                               <Link href="/divanbed/velvet-Fabric-Divan-Beds">
                                 Velvet Fabric Divan Beds
@@ -823,18 +819,23 @@ export default function Header() {
                               </a>
                             </li>
                             <li>
-                              <Link href="/headboard/PanerlHeadboard">
-                                Panel Headboard
+                              <Link href="/headboard/cubeheadboard">
+                               Cube Headboard
                               </Link>
                             </li>
                             <li>
-                              <Link href="/headboard/cubeheadboard">
-                                Diamond Cube Headboard
+                              <Link href="/headboard/four-panel-headboard">
+                                4 Panel Vertical Headboard
+                              </Link>
+                            </li>
+                            <li>
+                              <Link href="/headboard/three-panel-headboard">
+                                3 Panel Horizontal Headboard
                               </Link>
                             </li>
                             <li>
                               <Link href="/headboard/plainheadboard">
-                                Plain Headboard
+                              Plain Headboard
                               </Link>
                             </li>
                             <li>

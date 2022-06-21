@@ -20,15 +20,16 @@ const options = [
 ];
 
 
-function Fourfeetheadboard({response}){
+function ThreePanel({response}){
   const router = useRouter();
   
+  const [colors,setColor]=useState("grey Linen")
+
   const [size,setSize]=useState("");
   const[maxPrice,setMaxPrice]=useState();
   const [minPrice,setMinPrice]=useState();
   const colorVariant=["Grey Linen","Grey Suede","Chenille","Black Crushed"]
-  const [imageIndex,setImageIndex]=useState("0");
-
+  const [imageIndex,setImageIndex]=useState("0")
  
  
 
@@ -41,6 +42,13 @@ function Fourfeetheadboard({response}){
     setItem(updatedItems);
 
   }
+
+  useEffect(()=>{
+
+    router.push(`/headboard/three-panel-headboard?${size?"size="+size:""}${maxPrice ? size?"&maxPrice="+maxPrice:"maxPrice="+maxPrice : ""}${minPrice? "&minPrice="+minPrice:""}`)
+
+  },[size,maxPrice,minPrice])
+
 
     return(
         <div style={{fontFamily:"sofia-pro,Helvetica,Arial,sans-serif"}}>
@@ -64,7 +72,7 @@ function Fourfeetheadboard({response}){
         
           <div className="container">
               <div className="row text-center ">
-                  <h1 className="font-weight-bold mt-6" style={{color:"#0e3f70"}}>2FT 6" Headboard</h1>
+                  <h1 className="font-weight-bold mt-6" style={{color:"#0e3f70"}}>Three Panel Horizontal Headboard</h1>
                   <p className="mt-4" style={{fontSize:"17px",fontWeight:"300",color:"#3a356d",fontStyle:"normal"}}>A great night’s sleep starts with the perfect bed, and we can help with that! Not only are our house fabric divan beds ridiculously comfortable, but they’re super stylish too. Available in a variety of fabrics and colours, our range of divan beds will complement any home decor perfectly. We have something to suit everyone.</p>
 
               </div>
@@ -87,7 +95,7 @@ function Fourfeetheadboard({response}){
                   />
                 </a>
 
-                <p className="text-center text-blue mt-2">    Single(2FT 6") </p>
+                <p className="text-center text-blue mt-2">   2.6ft Single </p>
               </div>
 
               <div className="single-box category-icon" >
@@ -100,7 +108,7 @@ function Fourfeetheadboard({response}){
                     src="/assets/images/image/bed-sizes-02.png"
                   />
                 </a>
-                <p className="text-center text-blue mt-2">    Single(3FT) </p>
+                <p className="text-center text-blue mt-2">   3ft Single </p>
               </div>
 
               <div className="single-box category-icon">
@@ -112,7 +120,7 @@ function Fourfeetheadboard({response}){
                     src="/assets/images/image/bed-sizes-03.png"
                   />
                 </a>
-                <p className="text-center text-blue mt-2">  Small Double(4FT) </p>
+                <p className="text-center text-blue mt-2">  4ft Single  </p>
               </div>
 
               <div className="single-box category-icon">
@@ -124,7 +132,7 @@ function Fourfeetheadboard({response}){
                     src="/assets/images/image/bed-sizes-04.png"
                   />
                 </a>
-                <p className="text-center text-blue mt-2">  Double(4FT 6") </p>
+                <p className="text-center text-blue mt-2">  4.6ft Single </p>
               </div>
 
               <div className="single-box category-icon">
@@ -136,7 +144,7 @@ function Fourfeetheadboard({response}){
                     src="/assets/images/image/bed-sizes-05.png"
                   />
                 </a>
-                <p className="text-center text-blue mt-2">   King(5FT) </p>
+                <p className="text-center text-blue mt-2">   5ft Single </p>
               </div>
 
               <div className="single-box category-icon">
@@ -148,15 +156,15 @@ function Fourfeetheadboard({response}){
                     src="/assets/images/image/bed-sizes-N-01.png"
                   />
                 </a>
-                <p className="text-center text-blue mt-2">   Super King(6FT)  </p>
+                <p className="text-center text-blue mt-2">   6ft Single  </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      
-          {/* Filter Tag Start */}
-          <div
+
+           {/* Filter Tag Start */}
+           <div
                 className="container mt-4 mb-4 rounded"
                 style={{ backgroundColor: "#f2f2f2" }}
               >
@@ -165,13 +173,26 @@ function Fourfeetheadboard({response}){
                     <span
                       style={{ marginRight: "0 !important", margin: "0 auto" }}
                     >
-                     
+                      {/* <select
+                        className="dropdown-section"
+                        onChange={(e) =>
+                          router.push(`/product/headboard?size=${e.target.value}`)
+                        }
+                      >
+                        <option label="Beds" />
+                        <option value="2FT 6" label="2 6Feet" />
+                        <option value="3FT" label="3Feet" />
+                        <option value="4FT" label="4Feet" />
+                        <option value="4FT 6" label="4 6Feet" />
+                        <option value="5FT" label="5 Feet" />
+                        <option value="6FT" label="6 Feet" />
+                      </select> */}
 
                      <select
                         className="dropdown-section"
                         onChange={(e) =>
-                          // router.push(`/product/divanbed?size=${e.target.value}`)
-                          setSize(e.target.value)
+                          router.push(`/headboard/three-panel-headboard?size=${e.target.value}`)
+                          // setSize(e.target.value)
                         }
                       >
                         <option label="Beds" />
@@ -204,14 +225,20 @@ function Fourfeetheadboard({response}){
                     <span
                       style={{ marginRight: "0 !important", margin: "0 auto" }}
                     >
-                     
+                      {/* <select className="dropdown-section">
+                        <option label="Price" />
+                        <option value="2FT 6" label="2Feet" />
+                        <option value="2FT 6" label="2Feet" />
+                        <option value="2FT 6" label="2Feet" />
+                        <option value="2FT 6" label="2Feet" />
+                      </select> */}
 
                      <select className="dropdown-section"
                       onChange={(e) =>{
                         const value = JSON.parse(e.target.value)
                         setMaxPrice(value.maxPrice);
                         setMinPrice(value.minPrice)
-                        router.push(`/product/headboard?maxPrice=${value.maxPrice}&minPrice=${value.minPrice}${router?.query?.size?"&size="+router.query.size:""}`)
+                        router.push(`/headboard/three-panel-headboard?maxPrice=${value.maxPrice}&minPrice=${value.minPrice}${router?.query?.size?"&size="+router.query.size:""}`)
               
                     
                         }  }>
@@ -224,7 +251,9 @@ function Fourfeetheadboard({response}){
                     </span>
                   </div>
                 </div>
-              </div>          
+              </div>
+
+          
 
           
     
@@ -240,29 +269,29 @@ function Fourfeetheadboard({response}){
           response.map((item) =>{
               
               let product_color
-              switch(imageIndex){
-                case "0": product_color="Grey Linen";
-                break;
-                case "1": product_color="Grey Suede";
-                break;
-                case "2": product_color="Chenille";
-                break;
-                case "3": product_color="Black Crushed";
-                break;
-              }
-             
-         
-              return (
+                  switch(imageIndex){
+                    case "0": product_color="Grey Linen";
+                    break;
+                    case "1": product_color="Grey Suede";
+                    break;
+                    case "2": product_color="Chenille";
+                    break;
+                    case "3": product_color="Black Crushed";
+                    break;
+                  }
                  
-                  
-                <HeadboardBox
-                  src={item.images[imageIndex].url}
-                  title={item.product_name}
-                  price={item.price}
-                  category={item.category}
-                  size={item.size}
-                  color={product_color}
-                  />
+             
+                  return (
+                     
+                      
+                    <HeadboardBox
+                      src={item.images[imageIndex].url}
+                      title={item.product_name}
+                      price={item.price}
+                      category={item.category}
+                      size={item.size}
+                      color={product_color}
+                    />
               );
           })
       }
@@ -329,22 +358,23 @@ Another advantage to divans is that they don’t take up too much space as the b
         </div>
     )
 }
-export default Fourfeetheadboard;
+export default ThreePanel;
 export async function getServerSideProps(context) {
-    const { req } = context;
-    const size = req?.__NEXT_INIT_QUERY?.size;
-    let sizes = "";
-  
-    size ? (sizes = size) : (sizes = "4FT");
-    const data = await axios.post(
-      `${process.env.BASE_URL}/api/headboard/getbeds`,
-      {
-        method: "size",
-        value: sizes,
-      }
-    );
-    const response = data.data.data;
-    return {
-        props: { response }, // will be passed to the page component as props
-      };
+  const { req } = context;
+  const size = req?.__NEXT_INIT_QUERY?.size;
+  let sizes = "";
+  const category = req?.__NEXT_INIT_QUERY?.category;
+
+  size ? (sizes = size) : (sizes = "2FT 6");
+  const data = await axios.post(
+    `${process.env.BASE_URL}/api/headboard/getbeds?size=${size}`,
+    {
+      method: "category",   // for categorie selection
+      value: "Cube Headboard",
+    }
+  );
+  const response = data.data.data;
+  return {
+    props: { response }, // will be passed to the page component as props
+  };
 }

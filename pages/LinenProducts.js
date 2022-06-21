@@ -359,9 +359,10 @@ console.log(divanBedsColorName[0].images[0].color1)
                     <Image
                       id="shwimg_1"
                       className="imgfornone"
-                      width={600}
-                      height={550}
+                      width={3000}
+                      height={3000}
                       src={image}
+                      priority
                     />
                   </div>
 
@@ -1183,7 +1184,7 @@ console.log(divanBedsColorName[0].images[0].color1)
                       <br />
                       <br />
                       <div>
-                        {response2.map((bed) => {
+                        {/* {response2.map((bed) => {
                           return (
                             <div
                               className="container bg-white"
@@ -1196,7 +1197,7 @@ console.log(divanBedsColorName[0].images[0].color1)
                                 <div className="col-md-2 col-6">
                                   <img
                                     className="mobile-width"
-                                    //src="/assets/images/ProductImage/Chicago-3-Seater-Crushed-Velvet-Silver-1-768x549.jpg"
+                                    
                                     src={bed.images[0].color1.base_url}
                                     style={{ width: "94px" }}
                                     alt=""
@@ -1210,7 +1211,7 @@ console.log(divanBedsColorName[0].images[0].color1)
                                     }}
                                     className="completebed-heading"
                                   >
-                                    {/* <b>Chicago 3 Seater Crushed Velvet Silver</b> */}
+                           
                                     {bed.product_name}
                                   </h6>
                                   <img
@@ -1239,7 +1240,7 @@ console.log(divanBedsColorName[0].images[0].color1)
                               </div>
                             </div>
                           );
-                        })}
+                        })} */}
 
                        
 
@@ -1328,7 +1329,7 @@ console.log(divanBedsColorName[0].images[0].color1)
                        
                       </AccordionDetails>
                     </Accordion>
-                    <Accordion>
+                    {/* <Accordion>
                       <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel2a-content"
@@ -1371,8 +1372,8 @@ console.log(divanBedsColorName[0].images[0].color1)
                           </b>
                         </Typography>
                       </AccordionDetails>
-                    </Accordion>
-                    <Accordion>
+                    </Accordion> */}
+                    {/* <Accordion>
                       <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel3a-content"
@@ -1395,8 +1396,8 @@ console.log(divanBedsColorName[0].images[0].color1)
                         the industry's standard dummy text ever since the 1500s,
                         when an unknown
                       </AccordionDetails>
-                    </Accordion>
-
+                    </Accordion> */}
+{/* 
                     <Accordion>
                       <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
@@ -1421,7 +1422,7 @@ console.log(divanBedsColorName[0].images[0].color1)
                         your order a £30 administration charge will be liable to
                         be paid, and this will be deducted from your order.
                       </AccordionDetails>
-                    </Accordion>
+                    </Accordion> */}
 
                     <Accordion>
                       <AccordionSummary

@@ -350,9 +350,10 @@ function NewProduct({ response, response1, response2 }) {
                     <Image
                       id="shwimg_1"
                       className="imgfornone"
-                      width={600}
-                      height={550}
+                      width={1536}
+                      height={639}
                       src={image}
+                      priority
                     />
                   </div>
 
