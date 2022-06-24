@@ -1171,8 +1171,8 @@ console.log(divanBedsColorName[0].images[0].color1)
               <div className="container ">
                 <div className="row ">
                   <div className="col-sm-5 mt-10 ">
-                    <div style={{ position: "sticky", top: "10px" }}>
-                      <h3
+                    <div style={{ position: "sticky" }}>
+                      {/* <h3
                         style={{
                           color: "#222178",
                           fontWeight: "500",
@@ -1180,9 +1180,8 @@ console.log(divanBedsColorName[0].images[0].color1)
                         }}
                       >
                         <b>Complete your Bedroom</b>
-                      </h3>
-                      <br />
-                      <br />
+                      </h3> */}
+                      
                       <div>
                         {/* {response2.map((bed) => {
                           return (
@@ -1316,7 +1315,7 @@ console.log(divanBedsColorName[0].images[0].color1)
                             fontSize: "18px",
                           }}
                         >
-                          DESCRIPTION
+                       PRODUCT DESCRIPTION
                         </Typography>
                       </AccordionSummary>
                       <AccordionDetails>
@@ -1442,33 +1441,24 @@ console.log(divanBedsColorName[0].images[0].color1)
                         </Typography>
                       </AccordionSummary>
                       <AccordionDetails>
-                        DUE TO COVID-19 WE CANNOT ACCEPT ANY RETURNS OF ITEMS
-                        BEING OPENED OR USED. Our policy lasts 30 days. If 30
-                        days have gone by since your purchase, unfortunately, we
-                        can’t offer you a refund or exchange. Any cancellations
-                        after 48 hours will incur a £30:00 cancellation fee due
-                        to the item being made. Please note if any items are no
-                        longer wanted within 30 days, and a change of mind
-                        occurs, you must return the item to us at your own cost,
-                        Or pay a collection fee of £62 to us directly and we can
-                        arrange for collection with one of our drivers – please
-                        ensure you clearly mark your name, order number, and
-                        full address, so that we can process your return for
-                        you. Please ensure you use a tracking service so we can
-                        safely receive your returned item. Any returns must be
-                        approved by DBZKHAN LTD (bedsDivans) before any return
-                        is made. To be eligible for a return, your item must be
-                        unused and in the same condition that you received it.
-                        It must also be in the original packaging. So, you must
-                        make sure that the base bag is kept in good condition.
-                        To complete your return, we require a receipt or proof
-                        of purchase. This could be through a form of email or
-                        invoice. Our sales teams are always here to help you
-                        with any enquirers many thanks BedsDivans Please do not
-                        send your purchase back to the manufacturer before a
-                        booking is made this will speed up the process and allow
-                        us to rectify the issue.
-                      </AccordionDetails>
+                      DUE TO COVID-19 WE CANNOT ACCEPT ANY RETURNS OF ITEMS BEING OPENED OR USED.
+
+Our policy lasts 30 days. If 30 days have gone by since your purchase, unfortunately, we can’t offer you a refund or exchange. 
+
+Any cancellations after 48 hours will incur a £30:00 cancellation fee due to the item being made. 
+
+Please note if any items are no longer wanted within 30 days, and a change of mind occurs, you must return the item to us at your own cost, Or pay a collection fee of £62 to us directly and we can arrange for collection with one of our drivers – please ensure you clearly mark your name, order number, and full address, so that we can process your return for you. Please ensure you use a tracking service so we can safely receive your returned item. 
+
+Any returns must be approved by DBZKHAN LTD (bedsDivans) before any return is made.
+
+To be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging. So, you must make sure that the base bag is kept in good condition. 
+
+To complete your return, we require a receipt or proof of purchase. This could be through a form of email or invoice. 
+
+Our sales teams are always here to help you with any enquirers many thanks BedsDivans 
+
+Please do not send your purchase back to the manufacturer before a booking is made this will speed up the process and allow us to rectify the issue. 
+                        </AccordionDetails>
                     </Accordion>
 
                     <Accordion>
@@ -1489,14 +1479,35 @@ console.log(divanBedsColorName[0].images[0].color1)
                         </Typography>
                       </AccordionSummary>
                       <AccordionDetails>
-                        Once your return is received and inspected, we will send
-                        you an email to notify you that we have received your
-                        returned item. We will also notify you of the approval
-                        or rejection of your refund. If you are approved, then
-                        your refund will be processed, and a credit will
-                        automatically be applied to your credit card or original
-                        method of payment, within a 5-7 days depending on your
-                        bank
+                     Refunds, Returns and Exchanges<br/>
+Changing your order You can make any changes within 48 hours of placing your order, such as colour, bed size and quantity.
+
+Cancelling your order if you wish to cancel your order please either call or email us and we can get this done for you.
+
+To complete your return, we require proof of purchase. This could be an order confirmation or invoice.  Refunds take 5-7 working days to the original method of payment, depending on your bank.
+
+<br/>Returns after delivery<br/>
+You can return your order within 14 days after delivery.
+
+Items can be returned at your own cost or we can arrange for collection with one of our drivers.  The collection is subject to a courier charge of £62 if the item is unused, in its original condition and in its original packaging.
+
+Please ensure you use a tracking service if you are returning items at your own cost so we can safely receive your returned item. The item must clearly contain your name, order number and full address so that we can process your return.
+
+All returns must be approved by DBZKHAN LTD before any return is processed. Once your return is received and inspected, we will send you an email to notify you that we have received your returned item. You will then receive an email notifying you of the approval or rejection of your refund.
+
+What if my item doesn’t fit? It is your responsibility to make sure you carefully check the measurements before placing your order. If the item has been delivered and does not fit, you are liable for returning the item back or arranging collection subject to a courier charge of £62 in its original condition and in its original packaging, for a refund to be processed.
+
+Faulty products Our products are handled with care and usually arrive in good condition. If your item is faulty this must be reported within 24-48 hours of receiving your delivery.
+
+Reported faults will result in a dispute claim which require photographic evidence for our friendly after sales team to resolve the issue.
+
+<br/>Refunds<br/>
+If your return is approved, a refund will be processed, and a credit will automatically be applied to your original method of payment within 5-7 working days depending on your bank
+
+We want you to be satisfied with your purchase. If you aren’t, we’d like to help. Please contact us on info@bedDivans.co.uk or via our live chat service.
+
+<br/>Exchanges<br/>
+If for any reason you are not satisfied with your bed purchase in regard to manufacturing purposes, then we are more than happy to offer an exchange.
                       </AccordionDetails>
                     </Accordion>
                   </div>
@@ -1520,8 +1531,8 @@ console.log(divanBedsColorName[0].images[0].color1)
                     <div className="NeedImg bedsdivanLog text-center">
                       <img
                         className="mt-2"
-                        src="assets/images/DivanBedsicon/Logo (1).png"
-                        width="75%"
+                        src="assets/images/DivanBedsicon/logo.png"
+                        width="45%"
                         alt=""
                       />
                       <hr />
@@ -1559,7 +1570,7 @@ console.log(divanBedsColorName[0].images[0].color1)
 
             {/* Unique Scroller End */}
             <div className="section product-tab-area">
-              <div className="container">
+              <div className="container-fluid">
                 <div className="row">
                   <div className="col-md-12 text-center" data-aos="fade-up">
                     <div className="section-title mb-0">

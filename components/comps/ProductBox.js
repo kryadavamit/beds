@@ -30,7 +30,7 @@ function ProductBox({ src, title, price,category,size,color }) {
       <div className="product productfor2">
         <div className="thumb thumbfor2">
           <span className="image imagefor2">
-            <Image src={src} alt="Product" width={210} height={10} />
+            <Image src={src} alt="Product" width={2000} height={10} priority/>
             {/* <Image className="hover-image" src="/assets/images/product-image/2.jpg" width={180} height={180} alt="Product" /> */}
           </span>
           {/* <span className="badges">

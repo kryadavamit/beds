@@ -22518,7 +22518,7 @@ a.image.imagefor img {
   font-size: 27px;
 }
 .HeadingProduct {
-  color: #5b3327;
+  color: #fff;
   font-size: 17px;
   font-weight: 600;
 }
@@ -24248,4 +24248,18 @@ nav.newTab.nav.nav-tabs a.active {
 
 .add-to-basket a {
   font-size: 11px;
+}
+
+.productfor2 .thumbfor2 .imagefor2 img {
+
+object-fit: cover;
+
+object-position: -37px 0px;
+
+transform: scale(1);
+
+width: 353% !important;
+
+zoom: 0.7;
+
 }
