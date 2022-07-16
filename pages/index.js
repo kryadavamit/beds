@@ -1724,7 +1724,7 @@ export default function Home({ response, response1, response2, response3 }) {
                 marginTop: "0px",
               }}
             >
-              <b>More Services</b>
+              <b>More ServiceS</b>
             </button>
           </div>
         </div>
